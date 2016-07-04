@@ -37,6 +37,7 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
+         alert("start get receivedEvent");
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
@@ -50,6 +51,7 @@ var app = {
      // Cordova is ready
     //
     getContacts:function() {
+        alert("start get getContacts");
         // find all contacts with 'Bob' in any name field
         var options = new ContactFindOptions();
         options.filter=""; 
@@ -60,6 +62,7 @@ var app = {
     // onSuccess: Get a snapshot of the current contacts
     //
     onSuccess:function(contacts) {
+         alert("start get onSuccess");
         document.querySelector(".app").style.display = "none";
         document.querySelector(".contact-container").style.display = "block";
         var contact_list = document.querySelector("#contact-list");
